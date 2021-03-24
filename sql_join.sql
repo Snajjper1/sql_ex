@@ -31,7 +31,7 @@ ORDER BY  (o.quantityOrdered * o.priceEach) DESC;
 
 SELECT
 	 o.`status` AS 'Order Status',
-	 d.quantityOrdered
+	 d.quantityOrdered AS '# Orders'
 FROM
 	 orders AS o
 JOIN
