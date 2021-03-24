@@ -33,4 +33,3 @@ productName as `Name`, productLine as `Product Line`, productScale as `Scale`, p
 from products as p 
 where (productLine='Classic Cars' or productLine = 'Vintage Cars') 
 order by productLine desc, productName;
-
