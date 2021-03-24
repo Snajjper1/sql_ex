@@ -17,3 +17,20 @@ select distinct status as `Status` from orders order by status;
 
 -- 4. Select all fields from the payments table for payments made on or after January 1, 2005. 
 -- Output should be sorted by increasing payment date.
+
+select * from payments where paymentDate >= '2005-01-01' order by paymentDate;
+
+-- 5. Write a query to display all Last Name, First Name, Email and Job Title of all employees working out 
+-- of the San Francisco office. Output should be sorted by last name.
+
+select lastName as `Last Name`, firstName as `Fist Name`, email, jobTitle as `Job Title` from employees as e join offices as o where o.city="San Francisco" order by lastName;
+
+-- 6. Write a query to display the Name, Product Line, Scale, and Vendor of all of the car products – both classic and vintage. 
+-- The output should display all vintage cars first (sorted alphabetically by name), and all classic cars last (also sorted alphabetically by name).
+
+select 
+productName as `Name`, productLine as `Product Line`, productScale as `Scale`, productVendor as `Vendor` 
+from products as p 
+where (productLine='Classic Cars' or productLine = 'Vintage Cars') 
+order by productLine desc, productName;
+
